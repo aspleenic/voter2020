@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Vote 2020 App</title></head>
+  <body>
+    <h3>Vote for Best Game of 2019</h3>
+      <form action = 'vote' method = 'post'>
+        <ul>
+          <% Options.each do |id, game| %>
+            <li>
+              <input type = 'radio' name = 'choice' value = '<%= id %>' id = 'choice_<%= id %>' />
+              <%= game %>
+            </li>
+          <% end %>
+        </ul>
+        <button type = 'submit'>Vote!</button>
+      </form>
+  </body>
+</html>
